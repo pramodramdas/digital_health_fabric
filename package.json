@@ -1,0 +1,42 @@
+{
+    "name": "healthcare",
+    "version": "1.0.0",
+    "description": "Hyperledger Fabric Health Care",
+    "main": "./contracts/healthcare.js",
+    "engines": {
+        "node": ">=8.4.0",
+        "npm": ">=5.3.0"
+    },
+    "scripts": {
+        "start": "node ./contracts/healthcare.js",
+        "dev_start": "nodemon --watch server.js --watch src --exec \"node server.js\"",
+        "server_start": "node server.js",
+        "test": "mocha --exit --timeout 15000"
+    },
+    "engine-strict": true,
+    "dependencies": {
+        "axios": "^0.18.0",
+        "dotenv": "^6.1.0",
+        "expect": "^23.6.0",
+        "express": "^4.16.4",
+        "fabric-ca-client": "unstable",
+        "fabric-client": "unstable",
+        "grpc": "1.9.1",
+        "jsonwebtoken": "^8.3.0",
+        "mongoose": "^5.3.4",
+        "fabric-shim": "unstable",
+        "mocha": "^5.2.0",
+        "sha.js": "^2.4.11"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.4",
+        "@theledger/fabric-mock-stub": "^2.0.3",
+        "@theledger/fabric-chaincode-utils": "^3.0.2"
+    },
+    "author": "Pramod",
+    "keywords": [
+        "Hyperledger",
+        "Fabric",
+        "Application"
+    ]
+}
