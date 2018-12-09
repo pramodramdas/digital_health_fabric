@@ -55,6 +55,11 @@ class HealthCare {
 
         let userData = {email,name,age,role:'patient',doctorList:[],files:{}};
         await stub.putState(email, Buffer.from(JSON.stringify(userData)));
+	
+	// to search by PartialKey
+        let indexName = 'age~name';
+        let patientAgeIndexKey = await stub.createCompositeKey(indexName, [age.toString(), name]);
+        await stub.putState(patientAgeIndexKey, Buffer.from('\u0000'));
 
         let storedUser = await stub.getState(email);
         return shim.success(Buffer.from(storedUser.toString()));

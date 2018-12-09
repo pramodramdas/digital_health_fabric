@@ -1,0 +1,13 @@
+{
+    "name":"doctor1",
+    "mspid":"Org1MSP",
+    "roles":null,
+    "affiliation":"",
+    "enrollmentSecret":"",
+    "enrollment":{
+        "signingIdentity":"372ea6b05336fdb1f55eacd37eeaf1c9819e33a409c067d4181700114c3e6a1b",
+        "identity":{
+            "certificate":"-----BEGIN CERTIFICATE-----\nMIICkzCCAjmgAwIBAgIUbvyFWVHGMj0tkqTkugKMFrNtLYowCgYIKoZIzj0EAwIw\nczELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh\nbiBGcmFuY2lzY28xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHDAaBgNVBAMT\nE2NhLm9yZzEuZXhhbXBsZS5jb20wHhcNMTgxMjAyMDcyNjAwWhcNMTkxMjAyMDcz\nMTAwWjBEMTAwDQYDVQQLEwZkb2N0b3IwCwYDVQQLEwRvcmcxMBIGA1UECxMLZGVw\nYXJ0bWVudDExEDAOBgNVBAMTB2RvY3RvcjEwWTATBgcqhkjOPQIBBggqhkjOPQMB\nBwNCAARfocP1iCqzU/ymJOTBf9blOuWw39XXjrlU/CZnsSxElkP8s65lJ7WmHa3L\nj2nqpjAtjrqvcns6Tr1VKKVlLWXWo4HZMIHWMA4GA1UdDwEB/wQEAwIHgDAMBgNV\nHRMBAf8EAjAAMB0GA1UdDgQWBBTyZV89ywDcBtRGycYrs+CTKjGM8TArBgNVHSME\nJDAigCBCOaoNzXba7ri6DNpwGFHRRQTTGq0bLd3brGpXNl5JfDBqBggqAwQFBgcI\nAQReeyJhdHRycyI6eyJoZi5BZmZpbGlhdGlvbiI6Im9yZzEuZGVwYXJ0bWVudDEi\nLCJoZi5FbnJvbGxtZW50SUQiOiJkb2N0b3IxIiwiaGYuVHlwZSI6ImRvY3RvciJ9\nfTAKBggqhkjOPQQDAgNIADBFAiEA6/MO8X2YZ17fKNPPvlKbkplFrSSVZzilV4w3\nGkSIImICIH/WP2F6RPJ4zt72ZmJ732lhnFqBfvvocLS5NF6QO2FV\n-----END CERTIFICATE-----\n"
+        }
+    }
+}

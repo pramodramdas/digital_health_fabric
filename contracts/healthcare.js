@@ -231,6 +231,35 @@ let Chaincode = class {
         else 
             return shim.error(Buffer.from('doctor or patient not registered'));
     }
+
+    async getQueryResultFromString(stub, args) {
+        if (args.length < 1) {
+            throw new Error('Incorrect number of arguments. query string expected');
+        }
+        let queryString = args[0];
+        let iterator = await stub.getQueryResult(queryString);
+        let allResults = [];
+
+        while (true) {
+            let res = await iterator.next();
+            let jsonRes = {};
+            if (res.value && res.value.value.toString()) {
+                jsonRes.Key = res.value.key;
+                try {
+                    jsonRes.Record = JSON.parse(res.value.value.toString('utf8'));
+                } catch (err) {
+                    console.log(err);
+                    jsonRes.Record = res.value.value.toString('utf8');
+                }
+            }
+            allResults.push(jsonRes);
+            if (res.done) {
+                console.log('end of getQueryResultFromString data');
+                await iterator.close();
+                return shim.success(Buffer.from(JSON.stringify(allResults)));
+            }
+        }
+    }
 }
 
 shim.start(new Chaincode());

@@ -176,10 +176,32 @@ const registerUser = (email, role, name, age) => {
     });
 }
 
+const getQueryResultFromString = async (req, res) => {
+    const { query } = req.body;
+    let invokingUser;// this should be extracted from jwt
+
+    if(res.locals.decoded) {
+        invokingUser = res.locals.decoded.email;
+        invokingRole = res.locals.decoded.role;
+    }
+    try {
+        const invokeArgs = [JSON.stringify(query)];
+        const fabClient = await ledgerUtil.getUser(cert_path, invokingUser);
+        if(fabClient && fabClient.status) {
+            let queryData = await ledgerUtil.queryChainCode(fabClient.fabric_client, 'getQueryResultFromString', invokeArgs);
+            return res.json({success:true, queryData});
+        }
+    } catch(err) {
+        console.log(err);
+        return res.json({success:false, msg:"error"});
+    }
+}
+
 module.exports = {
     getPatientInfo,
     getDoctorInfo,
     getFileSecret,
+    getQueryResultFromString,
     addFile,
     modifyAccess,
     registerUser
