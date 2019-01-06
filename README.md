@@ -14,9 +14,9 @@ https://github.com/pramodramdas/digital_healthcare
   ```docker exec -it cli bash```
 * Install chaincode  
   ```peer chaincode install -n healthcare -v v0 -l node --cafile /etc/hyperledger/configtx/ -p /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/digital_health_fabric/```
-  #### Note: I had copied this project to crypto-config(basic_network) and attached volume to cli container using docker-compose
-  ####       volumes: 
-  ####          - ./crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
+  ##### Note: I had copied this project to crypto-config(basic_network) and attached volume to cli container using docker-compose
+  #####       volumes: 
+  #####          - ./crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
 * instantiate chaincode  
   ```peer chaincode instantiate -o orderer.example.com:7050 -C mychannel -n healthcare -l node -v v0 -c '{"args":["init"]}'```
 * Optional invoke using cli,
