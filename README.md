@@ -1,6 +1,11 @@
 # digital healthcare on hyperledger fabric
 This is api server which interacts with healtcare chaincode installed on hyperledger fabric basic_network.
 
+Refer below urls.  
+https://github.com/hyperledger/fabric-samples  
+https://github.com/pramodramdas/digital_healthcare
+
+
 ### Steps to setup chaincode:
 * Bring fabric basic_network up  
 * Register chaincode from root folder  
