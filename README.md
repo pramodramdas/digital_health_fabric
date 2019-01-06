@@ -4,8 +4,7 @@ This is api server which interacts with healtcare chaincode installed on hyperle
 ### Steps to setup chaincode:
 * Bring fabric basic_network up  
 * Register chaincode from root folder  
-  ```CORE_CHAINCODE_ID_NAME="healthcare:v0" npm start -- --peer.address localhost:7052
-  ```
+  ```CORE_CHAINCODE_ID_NAME="healthcare:v0" npm start -- --peer.address localhost:7052```
 * Login to cli  
   ```docker exec -it cli bash
   ```
